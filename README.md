@@ -1,7 +1,8 @@
-# WebChat: Chat with Web Pages using Deepseek R1
+# WebChat: Chat with Web Pages using DeepSeek R1
 
 ## Overview
 WebChat is a Streamlit-based web application that allows users to interact with web pages by summarizing their content and answering user queries using the Deepseek R1 language model. The app extracts textual content from a given URL, processes it into vector embeddings using FAISS, and retrieves relevant responses based on the user prompt.
+
 
 ## Features
 - Extracts content from any webpage URL
@@ -69,6 +70,3 @@ This project is licensed under the MIT License.
 
 ## Contributions
 Contributions are welcome! Feel free to fork the repository and submit pull requests.
-
-## Acknowledgments
-Special thanks to the developers of LangChain, FAISS, and Deepseek AI for providing the necessary tools to build this project.
