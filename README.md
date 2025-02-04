@@ -1,10 +1,11 @@
-# WebChat: Chat with Web Pages using DeepSeek R1
+# WebChat: Chat with Web Pages using DeepSeek R1 locally [Ollama]
 
 ## Overview
-WebChat is a Streamlit-based web application that allows users to interact with web pages by summarizing their content and answering user queries using the Deepseek R1 language model. The app extracts textual content from a given URL, processes it into vector embeddings using FAISS, and retrieves relevant responses based on the user prompt.
+WebChat is an RAG-based web application that allows users to interact with web pages by summarizing their content and answering user queries using the Deepseek R1 language model. The app extracts textual content from a given URL, processes it into vector embeddings using FAISS, and retrieves relevant responses based on the user prompt.
 
 
 ## Features
+- local based on Ollama
 - Extracts content from any webpage URL
 - Summarizes webpage content using Deepseek R1 (1.5B model)
 - Stores vector embeddings with FAISS for efficient retrieval
