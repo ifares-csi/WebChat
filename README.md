@@ -1,81 +1,74 @@
-# Chat With WebPage 
+# WebChat: Chat with Web Pages using Deepseek R1
 
 ## Overview
-This project is a **Streamlit-based Webpage chat Tool** that allows users to input a webpage URL and a custom query to retrieve response content using **LangChain** and **OpenAI GPT-4o**. The application processes webpage content, extracts relevant text, generates context-aware summaries, and answer the questions accodring the the content of the webpage.
+WebChat is a Streamlit-based web application that allows users to interact with web pages by summarizing their content and answering user queries using the Deepseek R1 language model. The app extracts textual content from a given URL, processes it into vector embeddings using FAISS, and retrieves relevant responses based on the user prompt.
 
 ## Features
-- **Extracts webpage content** automatically.
-- **Summarizes content** using OpenAI's `gpt-4o` API.
-- **Retrieves relevant information** based on user queries.
-- **Utilizes FAISS vector storage** for efficient retrieval.
-- **Checks webpage accessibility** before processing.
-- **User-friendly Streamlit UI** with a responsive layout.
+- Extracts content from any webpage URL
+- Summarizes webpage content using Deepseek R1 (1.5B model)
+- Stores vector embeddings with FAISS for efficient retrieval
+- Provides a structured reasoning process with a final answer
+- User-friendly UI built with Streamlit
 
 ## Installation
-### Prerequisites
-Ensure you have Python 3.12 installed and `pip` available.
 
-### Steps
-1. **Clone the repository**:
+### Prerequisites
+- Python 3.12
+- deepSeek R1
+- Streamlit
+- LangChain
+- FAISS
+- Ollama
+- Requests
+- Dotenv
+
+### Setup
+1. Clone the repository:
    ```bash
-   git clone https://github.com/ifares-csi/Chat-With-WebPage-Agent.git
-   cd chat-with-webpage
+   git clone https://github.com/ifares-csi/WebChat.git
+   cd WebChat
    ```
-2. **Create a virtual environment (optional but recommended)**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   ```
-3. **Install dependencies**:
+
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-4. **Set up environment variables**:
-   - Create a `.env` file in the root directory and add:
-     ```ini
-     OPENAI_API_KEY=your-openai-api-key
-     LANGSMITH_API_KEY=your-langsmith-api-key
-     LANGSMITH_PROJECT=your-project-name
-     ```
 
-## Usage
-1. **Run the Streamlit app**:
+3. Set up environment variables:
+   Create a `.env` file and add:
+   ```bash
+   LANGSMITH_API_KEY=your_langsmith_api_key
+   LANGSMITH_PROJECT=your_project_name
+   ```
+
+4. Run the application:
    ```bash
    streamlit run app.py
    ```
-2. **Enter a webpage URL** and a query in the provided fields.
-3. **Click "Summarize"** to generate a summary.
-4. **View results** displayed on the page.
 
-## Dependencies
-- **Streamlit** for UI (`streamlit`)
-- **LangChain** for document processing
-- **OpenAI API** for language modeling
-- **FAISS** for vector-based retrieval
-- **Requests** for webpage accessibility checking
+## Usage
+1. Enter a valid webpage URL.
+2. Provide a question or request a summary.
+3. Click the **Submit** button.
+4. The application will extract content, process it, and generate a response.
 
-## Contributing
-1. **Fork the repository**.
-2. **Create a feature branch**:
-   ```bash
-   git checkout -b feature-branch
-   ```
-3. **Commit changes**:
-   ```bash
-   git commit -m "Added new feature"
-   ```
-4. **Push the branch**:
-   ```bash
-   git push origin feature-branch
-   ```
-5. **Submit a Pull Request**.
+## Technologies Used
+- **DeepSeek R1 (1.5B model)**: for response generation and reasoning
+- **Streamlit**: UI framework
+- **Ollama**: LLM model provider
+- **LangChain**: AI framework for document retrieval
+- **FAISS**: Vector database for efficient storage and retrieval
+- **Requests**: Webpage content extraction
+- **Dotenv**: Environment variable management
 
 ## License
 This project is licensed under the MIT License.
 
-<!-- ## Contact
-For questions or suggestions, feel free to reach out!
+## Author
+**El-Fares**
 
-📧 Email: your-email@example.com
-🔗 GitHub: [Your Repository](https://github.com/your-repo/chat-with-webpage)
- -->
+## Contributions
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
+
+## Acknowledgments
+Special thanks to the developers of LangChain, FAISS, and Deepseek AI for providing the necessary tools to build this project.
